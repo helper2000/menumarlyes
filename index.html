@@ -24,11 +24,27 @@
       header.scrolled .menus > ul > li::after {
         background-color: var(--text-color-white);
       }
+      /* إضافة CSS للتأكد من إخفاء الـ loader بعد التحميل */
+      .loader {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        z-index: 9999;
+      }
+      .loader.hidden {
+        display: none;
+      }
     </style>
   </head>
   <body>
-
-    <div class="loader">
+    <div class="loader" id="loader">
       <i class="fas fa-utensils loader-icone"></i>
       <p>Marley’s</p>
       <div class="loader-ellipses">
@@ -1350,24 +1366,3 @@
             <div class="reservation-box" data-aos="fade-down-left">
               <div class="reservation-wrapper">
                 <h2>ساعات العمل</h2>
-                <div class="reservation-date-time">
-                  <p>الثلاثاء: .......................... 7 صباحًا - 9 مساءً</p>
-                  <p>الأربعاء: ..................... 7 صباحًا - 9 مساءً</p>
-                  <p>الخميس: ......................... 7 صباحًا - 9 مساءً</p>
-                  <p>الجمعة: ........................... 7 صباحًا - 9 مساءً</p>
-                  <p>السبت: ............................. 7 صباحًا - 9 مساءً</p>
-                  <p>الأحد: ............................. 7 صباحًا - 9 مساءً</p>
-                  <p>الإثنين: ........................... مغلق</p>
-                </div>
-                <h2 class="pb-2">أرقام الحجز</h2>
-                <h3>201111175640</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <p class="text-center pt-4 mt-3 pt-lg-0">&copy; 2025 <b>Marley’s.</b> كل الحقوق محفوظة. تصميم الموقع بواسطة <a href="https://www.facebook.com/helper2000/" class="fw-bold author-name">KUO</a></p>
-        </div>
-      </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin
