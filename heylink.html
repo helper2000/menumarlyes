@@ -3,101 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marley's Premium Lounge</title>
+  <title>Marley’s Premium Lounge</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0d1f1a;
-      color: #f5f5f5;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(160deg, #0b2e20, #122f25);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 15px;
+    }
+    .logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: url("https://i.ibb.co/pJ3V1vg/marleys-logo-gold.png") center/cover no-repeat;
+      margin-bottom: 15px;
+      border: 3px solid #d4af37;
+    }
+    h1 {
+      font-size: 1.6rem;
+      color: #d4af37;
+      margin: 10px 0;
       text-align: center;
     }
-    header {
-      padding: 20px;
+    p {
+      font-size: 0.95rem;
+      opacity: 0.85;
+      text-align: center;
+      margin-bottom: 20px;
     }
-    header h1 {
-      color: #d4af37;
-      font-size: 2em;
-      margin: 0;
-    }
-    .description {
-      margin: 10px auto 20px;
-      max-width: 500px;
-      font-size: 1.1em;
-      line-height: 1.6;
-    }
-    .btn {
+    .link-btn {
       display: block;
-      width: 80%;
+      width: 100%;
       max-width: 320px;
-      margin: 12px auto;
-      padding: 15px;
-      text-decoration: none;
-      color: #fff;
-      background: #1f4037;
+      margin: 10px auto;
+      padding: 14px 20px;
       border-radius: 12px;
-      font-size: 1.1em;
-      transition: 0.3s;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      background: #1e4532;
+      color: #fff;
+      border: 2px solid #d4af37;
+      transition: all 0.3s ease;
     }
-    .btn:hover {
-      background: #2c6e49;
+    .link-btn:hover {
+      background: #d4af37;
+      color: #0b2e20;
     }
-    .btn.whatsapp {
-      background: #25D366;
-      font-size: 1.3em;
-      font-weight: bold;
+    .whatsapp {
+      background: #25d366;
+      border: none;
+      font-size: 1.1rem;
     }
-    .btn.whatsapp:hover {
-      background: #1ebe5b;
-    }
-    .section {
-      margin: 30px 0;
+    .whatsapp:hover {
+      background: #1ebe5c;
+      color: #fff;
     }
     footer {
-      margin-top: 40px;
-      padding: 20px;
-      background: #0b1713;
-      font-size: 0.9em;
-    }
-    .social a {
-      margin: 0 10px;
-      color: #d4af37;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .social a:hover {
-      text-decoration: underline;
+      margin-top: 25px;
+      font-size: 0.85rem;
+      text-align: center;
+      opacity: 0.7;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Marley's Premium Lounge</h1>
-    <p class="description">
-      Marley’s is your go-to spot for tasty food and a cozy vibe.  
-      From hearty breakfasts to delicious dinners — Eat, relax, and enjoy the mood.
-    </p>
-  </header>
+  <div class="logo"></div>
+  <h1>Marley’s Premium Lounge</h1>
+  <p>Your go-to spot for tasty food & a cozy vibe 🍽️✨</p>
 
-  <div class="section">
-    <a href="menu.pdf" target="_blank" class="btn">📖 View Menu (PDF)</a>
-    <a href="https://wa.me/201111175640" target="_blank" class="btn whatsapp">💬 Order on WhatsApp</a>
-  </div>
+  <!-- WhatsApp Button -->
+  <a class="link-btn whatsapp" href="https://wa.me/201111175640" target="_blank">📲 Order on WhatsApp</a>
 
-  <div class="section">
-    <h2>📍 Our Branches</h2>
-    <p><b>Tivoli Dome:</b> 6WJV+6CV, Sidi Gaber, Alexandria</p>
-    <p><b>Green Plaza:</b> MVP, Smouha, Alexandria</p>
-    <p>☎️ Hotline: +20 111 117 5640</p>
-  </div>
+  <!-- Menu PDF -->
+  <a class="link-btn" href="https://example.com/marleys-menu.pdf" target="_blank">📖 View Menu (PDF)</a>
+
+  <!-- Social Links -->
+  <a class="link-btn" href="https://www.facebook.com/marleyslounge" target="_blank">🌐 Facebook</a>
+  <a class="link-btn" href="https://www.instagram.com/marleyslounge" target="_blank">📸 Instagram</a>
+  <a class="link-btn" href="https://www.tiktok.com/@marleyslounge" target="_blank">🎵 TikTok</a>
+
+  <!-- Branches -->
+  <a class="link-btn" href="https://maps.app.goo.gl/xyz" target="_blank">📍 Tivoli Dome Branch</a>
+  <a class="link-btn" href="https://maps.app.goo.gl/xyz" target="_blank">📍 Green Plaza Branch</a>
 
   <footer>
-    <div class="social">
-      <a href="https://www.facebook.com/marleyslounge" target="_blank">Facebook</a> |
-      <a href="https://www.instagram.com/marleyslounge" target="_blank">Instagram</a> |
-      <a href="https://www.tiktok.com/@marleyslounge" target="_blank">TikTok</a>
-    </div>
-    <p>© 2025 Marley's Premium Lounge</p>
+    © 2025 Marley’s Premium Lounge | All Rights Reserved
   </footer>
 </body>
 </html>
