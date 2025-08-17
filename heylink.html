@@ -3,107 +3,142 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Links</title>
+  <title>Marley’s Premium Lounge</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0a0f0d, #1b4332);
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #0b1d13, #1b4332);
       color: #fff;
       display: flex;
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
       padding: 20px;
+      text-align: center;
     }
 
-    .profile-img {
-      width: 120px;
-      height: 120px;
+    .logo {
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
-      border: 3px solid gold;
+      border: 3px solid #d4af37;
       object-fit: cover;
       margin-top: 30px;
+      box-shadow: 0 0 20px rgba(212,175,55,0.5);
     }
 
     h1 {
       margin: 15px 0 5px;
-      font-size: 22px;
+      font-size: 28px;
       font-weight: bold;
-      color: gold;
+      color: #d4af37;
     }
 
     p {
       margin: 0 0 25px;
-      font-size: 14px;
+      font-size: 15px;
       color: #ddd;
     }
 
     .link {
       width: 100%;
-      max-width: 350px;
+      max-width: 360px;
       background: #2d6a4f;
-      margin: 10px 0;
+      margin: 12px 0;
       padding: 15px;
       text-align: center;
-      border-radius: 12px;
+      border-radius: 14px;
       text-decoration: none;
       color: white;
       font-weight: bold;
       font-size: 16px;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      border: 1px solid #d4af37;
+      display: block;
     }
 
     .link:hover {
       background: #40916c;
-      transform: scale(1.03);
+      transform: scale(1.05);
+    }
+
+    .branch {
+      margin-top: 25px;
+    }
+
+    .branch h2 {
+      font-size: 18px;
+      color: #d4af37;
+      margin-bottom: 8px;
     }
 
     .socials {
       margin-top: 30px;
       display: flex;
-      gap: 15px;
+      gap: 18px;
+      justify-content: center;
     }
 
     .socials a img {
-      width: 35px;
-      height: 35px;
-      filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
+      width: 38px;
+      height: 38px;
+      filter: drop-shadow(0 0 6px rgba(0,0,0,0.6));
+      transition: transform 0.2s;
+    }
+
+    .socials a img:hover {
+      transform: scale(1.15);
     }
 
     footer {
       margin-top: auto;
-      font-size: 12px;
+      font-size: 13px;
       color: #aaa;
       padding: 15px 0;
     }
   </style>
 </head>
 <body>
-  <!-- صورة البروفايل -->
-  <img src="https://via.placeholder.com/120" alt="Profile" class="profile-img" />
+  <!-- لوجو مارليز -->
+  <img src="https://via.placeholder.com/150x150.png?text=Marley%27s+Logo" alt="Marley’s Logo" class="logo" />
 
   <!-- الاسم والوصف -->
-  <h1>My Name</h1>
-  <p>Welcome to my link hub ✨</p>
+  <h1>Marley’s Premium Lounge</h1>
+  <p>✨ Your cozy spot for food, drinks & good vibes ✨</p>
 
-  <!-- روابط -->
-  <a href="https://example.com" class="link">🌐 Visit My Website</a>
-  <a href="https://wa.me/201234567890" class="link">💬 WhatsApp Me</a>
-  <a href="https://instagram.com/" class="link">📸 Instagram</a>
-  <a href="https://facebook.com/" class="link">📘 Facebook</a>
+  <!-- روابط رئيسية -->
+  <a href="menu.pdf" class="link">📖 View Full Menu (PDF)</a>
+  <a href="https://wa.me/201234567890" class="link">💬 Order on WhatsApp</a>
 
-  <!-- أيقونات سوشيال -->
+  <!-- فرع 1 -->
+  <div class="branch">
+    <h2>📍 Marley’s – Tivoli Dome</h2>
+    <a href="tel:+201000111222" class="link">📞 Call: +20 100 011 1222</a>
+    <a href="https://wa.me/201000111222" class="link">💬 WhatsApp Tivoli</a>
+    <a href="https://www.google.com/maps?q=6WJV+6CV,+Tivoli+Dome,+Sidi+Gaber,+Alexandria" class="link">🗺️ Open in Google Maps</a>
+  </div>
+
+  <!-- فرع 2 -->
+  <div class="branch">
+    <h2>📍 Marley’s – Green Plaza</h2>
+    <a href="tel:+201111222333" class="link">📞 Call: +20 111 122 2333</a>
+    <a href="https://wa.me/201111222333" class="link">💬 WhatsApp Green Plaza</a>
+    <a href="https://www.google.com/maps?q=MVP,+Green+Plaza,+Smouha,+Alexandria" class="link">🗺️ Open in Google Maps</a>
+  </div>
+
+  <!-- سوشيال ميديا -->
   <div class="socials">
     <a href="https://instagram.com/"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
     <a href="https://facebook.com/"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
     <a href="https://wa.me/201234567890"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
+    <a href="https://maps.google.com/?q=Marley’s+Premium+Lounge"><img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Maps"></a>
   </div>
 
   <!-- فوتر -->
   <footer>
-    © 2025 My Links Page
+    © 2025 Marley’s Premium Lounge. All Rights Reserved.
   </footer>
 </body>
 </html>
