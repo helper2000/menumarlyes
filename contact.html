@@ -259,50 +259,51 @@
           </div>
         </section>
 
-        <section class="contact-us my-5 py-5">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8">
-                <div class="form">
-             <!-- ======= Contact Section ======= -->
+    <!-- ======= Contact Section ======= -->
 <section id="contact" class="contact">
   <div class="container">
 
     <div class="section-title">
       <h2>Contact</h2>
-      <p>Connect With Us</p>
+      <p>Stay Connected With Us</p>
     </div>
 
     <div class="row">
 
-      <div class="col-lg-6">
-
+      <!-- Social Media Links -->
+      <div class="col-lg-6 d-flex align-items-stretch">
         <div class="info">
-          <div class="social-links text-center">
-            <a href="https://facebook.com" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
-            <a href="https://instagram.com" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
-            <a href="https://wa.me/201234567890" class="whatsapp" target="_blank"><i class="bi bi-whatsapp"></i></a>
-            <a href="https://youtube.com" class="youtube" target="_blank"><i class="bi bi-youtube"></i></a>
+          <h4>Follow Us</h4>
+          <p>Stay in touch through our social media channels</p>
+          <div class="social-links mt-3">
+            <a href="https://facebook.com" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://instagram.com" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://wa.me/201234567890" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://youtube.com" class="youtube"><i class="bi bi-youtube"></i></a>
           </div>
         </div>
-
       </div>
 
-      <div class="col-lg-6">
+      <!-- Contact Form -->
+      <div class="col-lg-6 mt-5 mt-lg-0 d-flex align-items-stretch">
         <form action="forms/contact.php" method="post" role="form" class="php-email-form">
           <div class="row">
-            <div class="col form-group">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+            <div class="form-group col-md-6">
+              <label for="name">Your Name</label>
+              <input type="text" name="name" class="form-control" id="name" required>
             </div>
-            <div class="col form-group">
-              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+            <div class="form-group col-md-6">
+              <label for="name">Your Email</label>
+              <input type="email" class="form-control" name="email" id="email" required>
             </div>
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+            <label for="name">Subject</label>
+            <input type="text" class="form-control" name="subject" id="subject" required>
           </div>
           <div class="form-group">
-            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+            <label for="name">Message</label>
+            <textarea class="form-control" name="message" rows="10" required></textarea>
           </div>
           <div class="my-3">
             <div class="loading">Loading</div>
@@ -318,25 +319,6 @@
   </div>
 </section>
 <!-- End Contact Section -->
-
-<style>
-  .social-links a {
-    font-size: 24px;
-    display: inline-block;
-    background: #f3f3f3;
-    color: #444;
-    line-height: 1;
-    padding: 10px;
-    margin: 0 5px;
-    border-radius: 50%;
-    transition: 0.3s;
-  }
-  .social-links a:hover {
-    background: #5cb874;
-    color: #fff;
-  }
-</style>
-
                   </form>
                 </div>
               </div>
