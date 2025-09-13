@@ -1,136 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Graines and Greens</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/4b6c81a3f2.js" crossorigin="anonymous"></script>
+  <title>تنويه - سداد الاشتراك</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Cairo', sans-serif;
-      background: linear-gradient(135deg, #004d40, #00251a);
-      color: #fff;
-      text-align: center;
+      font-family: 'Cairo', sans-serif, Arial, sans-serif;
+      background: #f5f5f5;
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      padding: 20px;
     }
-    .logo img {
-      width: 160px;
-      margin: 20px 0;
-    }
-    h1 {
-      font-size: 28px;
-      color: #ffd700;
-      margin-bottom: 10px;
-    }
-    .links {
-      width: 100%;
-      max-width: 400px;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    .link-btn {
-      background: #004d40;
-      color: white;
-      text-decoration: none;
-      padding: 14px 20px;
-      border-radius: 12px;
+    .admin-banner {
+      direction: rtl;
+      position: fixed;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 9999;
+      width: calc(100% - 40px);
+      max-width: 920px;
+      background: linear-gradient(90deg,#b71c1c,#d32f2f);
+      color: #fff;
       border: 2px solid #ffd700;
-      font-size: 18px;
-      font-weight: bold;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.45);
+      padding: 12px 14px;
+      border-radius: 12px;
       display: flex;
+      gap: 12px;
       align-items: center;
-      justify-content: center;
-      transition: all 0.3s ease;
+      justify-content: space-between;
+      font-family: 'Cairo', sans-serif, Arial, sans-serif;
     }
-    .link-btn i {
-      margin-right: 10px;
+    .admin-banner .msg {
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
     }
-    .link-btn:hover {
+    .admin-banner .actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .admin-banner .btn {
       background: #ffd700;
-      color: #004d40;
+      color: #b71c1c;
+      padding: 8px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 6px 16px rgba(255,215,0,0.2);
+      transition: transform .12s ease, box-shadow .12s ease;
     }
-    .whatsapp {
-      background: #25d366;
-      color: white;
-      font-size: 20px;
+    .admin-banner .btn:active { transform: translateY(1px); }
+    .admin-banner .btn.secondary {
+      background: transparent;
+      color: #fff;
+      border: 1.5px solid rgba(255,255,255,0.5);
+      font-weight: 600;
     }
-    .menu {
-      background: #8e44ad;
+    .admin-banner .dismiss {
+      background: transparent;
+      color: rgba(255,255,255,0.9);
+      font-size: 18px;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+      border-radius: 8px;
     }
-    .countdown {
-      margin-top: 30px;
-      font-size: 22px;
-      font-weight: bold;
-      color: #ffd700;
-    }
-    footer {
-      margin-top: auto;
-      font-size: 14px;
-      color: #aaa;
-      padding: 15px;
+    @media (max-width:600px) {
+      .admin-banner { flex-direction: column; align-items: stretch; gap:10px; padding: 10px; top: 8px; }
+      .admin-banner .msg { font-size: 15px; text-align: center; }
+      .admin-banner .actions { justify-content: center; flex-wrap: wrap; }
     }
   </style>
 </head>
 <body>
-  <div class="logo">
-    <img src="https://i.ibb.co/pJ3V1vg/marleys-logo-gold.png" alt="Graines and Greens Logo">
+
+  <div id="adminBanner" class="admin-banner" role="status" aria-live="polite">
+    <div class="msg">برجاء مراجعة الإدارة وسداد الاشتراك للحفاظ على استمرار الخدمات المقدمة لكم.</div>
+
+    <div class="actions">
+      <!-- غيّر الروابط حسب احتياجاتك -->
+      <a id="contactAdminBtn" class="btn" href="mailto:admin@example.com?subject=مراجعة%20وسداد%20الاشتراك" target="_blank" rel="noopener">راجع الإدارة</a>
+      <a id="payBtn" class="btn" href="https://wa.me/01009108218?text=مرحبًا%20أريد%20سداد%20الاشتراك" target="_blank" rel="noopener">سداد الاشتراك</a>
+      <button id="laterBtn" class="btn secondary" aria-label="إغلاق مؤقت">لاحقًا</button>
+      <button id="dismissBtn" class="dismiss" title="إخفاء نهائي" aria-label="إخفاء نهائي">✕</button>
+    </div>
   </div>
-  <h1>Graines and Greens</h1>
-
-  <div class="links">
-    <a href="gngmenu.pdf" class="link-btn menu" target="_blank">
-      <i class="fas fa-utensils"></i> View Menu
-    </a>
-    <a href="https://wa.me/201111175640" class="link-btn whatsapp" target="_blank">
-      <i class="fab fa-whatsapp"></i> WhatsApp
-    </a>
-    <a href="https://facebook.com/" class="link-btn" target="_blank">
-      <i class="fab fa-facebook"></i> Facebook
-    </a>
-    <a href="https://instagram.com/" class="link-btn" target="_blank">
-      <i class="fab fa-instagram"></i> Instagram
-    </a>
-    <a href="https://tiktok.com/" class="link-btn" target="_blank">
-      <i class="fab fa-tiktok"></i> TikTok
-    </a>
-  </div>
-
-  <div class="countdown" id="countdown"></div>
-
-  <footer>© 2025 Graines and Greens</footer>
 
   <script>
-    // عداد تنازلي 30 يوم من دلوقتي
-    const countdownElement = document.getElementById("countdown");
-    const endDate = new Date();
-    endDate.setDate(endDate.getDate() + 30);
+    (function() {
+      const banner = document.getElementById('adminBanner');
+      const dismiss = document.getElementById('dismissBtn');
+      const later = document.getElementById('laterBtn');
+      const storageKey = 'admin_banner_hidden_until';
 
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = endDate - now;
-
-      if (distance < 0) {
-        countdownElement.innerHTML = "The offer has ended!";
-        return;
+      function shouldHide() {
+        const raw = localStorage.getItem(storageKey);
+        if (!raw) return false;
+        try {
+          const data = JSON.parse(raw);
+          if (data.type === 'permanent') return true;
+          if (data.type === 'until' && Date.now() < data.until) return true;
+          return false;
+        } catch(e) { return false; }
       }
 
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      if (shouldHide()) {
+        banner.style.display = 'none';
+      }
 
-      countdownElement.innerHTML = `Offer ends in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
-    }
+      dismiss.addEventListener('click', function() {
+        localStorage.setItem(storageKey, JSON.stringify({ type: 'permanent' }));
+        banner.style.display = 'none';
+      });
 
-    setInterval(updateCountdown, 1000);
+      later.addEventListener('click', function() {
+        const hours = 24; // مدة الإخفاء المؤقت (بالساعات)
+        const until = Date.now() + hours * 60 * 60 * 1000;
+        localStorage.setItem(storageKey, JSON.stringify({ type: 'until', until }));
+        banner.style.display = 'none';
+      });
+    })();
   </script>
+
 </body>
 </html>
